@@ -1,10 +1,11 @@
 AngularJS-SpringMVC-example
 ===========================
 
-Ein Beispielprojekt für das Zusammenspiel von AngularJS und Spring-MVC
+Ein Beispielprojekt für das Zusammenspiel von AngularJS und Spring-MVC.
+
 Folgende Features werden gezeigt:
 - Basiskonfiguration Spring MVC / AngularJS
 - Einfache CRUD Funktionalität
-- Fehlermeldungen
-- I18N
+- Generische Behandlung von (Fehler-)Meldungen
+- Clientseitige I18N
 - TODO: Security

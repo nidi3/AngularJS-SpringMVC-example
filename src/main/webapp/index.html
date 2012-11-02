@@ -1,68 +1,11 @@
 <!DOCTYPE html>
-<html ng-app="angularspring">
+<html>
 
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    <meta http-equiv="refresh" content="0;url=/main.html#/person"/>
 </head>
 
-<body ng-controller="Controller">
-
-<div class="navbar navbar-fixed">
-    <div class="navbar-inner">
-        <a class="brand" href="#">
-            <msg key="title"></msg>
-        </a>
-        <ul class="nav nav-pills pull-right">
-            <li ng-class="active(language()=='de')">
-                <a ng-click="setLanguage('de')">Deutsch</a>
-            </li>
-            <li ng-class="active(language()=='en')">
-                <a ng-click="setLanguage('en')">English</a>
-            </li>
-        </ul>
-    </div>
-</div>
-<div class="container">
-
-    <div ng-class="'alert alert-'+message().type" ng-show="message().show">
-        <button type="button" class="close" ng-click="message().show=false">×</button>
-        <msg key-expr="message().text"></msg>
-    </div>
-
-    <table class="table table-striped">
-        <tr>
-            <th ng-click="orderBy('firstName')"><msg key="firstName"></msg> <i ng-class="orderIcon('firstName')"></i></th>
-            <th ng-click="orderBy('lastName')"><msg key="lastName"></msg> <i ng-class="orderIcon('lastName')"></i></th>
-            <th><msg key="delete"></msg></th>
-        </tr>
-        <tr ng-repeat="person in persons|orderBy:order">
-            <td>{{person.firstName}}</td>
-            <td>{{person.lastName}}</td>
-            <td><a ng-click="delete(person)"><i class="icon-trash"></i></a></td>
-        </tr>
-    </table>
-
-    <form>
-        <fieldset>
-            <legend><msg key="newPerson"></msg></legend>
-            <label><msg key="firstName"></msg></label>
-            <input type="text" ng-model="person.firstName"/>
-            <label><msg key="lastName"></msg></label>
-            <input type="text" ng-model="person.lastName"/>
-            <label></label>
-            <button type="submit" class="btn" ng-click="save()"><msg key="save"></msg></button>
-        </fieldset>
-    </form>
-</div>
-
-
-<script type="text/javascript" src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
-<script type="text/javascript" src="jquery.i18n.properties-min-1.0.9.js"></script>
-<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.js"></script>
-<script type="text/javascript" src="angularspring.js"></script>
-
+<body>
 </body>
-
 </html>
 
