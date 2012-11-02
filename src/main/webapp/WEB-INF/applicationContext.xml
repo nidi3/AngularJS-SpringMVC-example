@@ -13,10 +13,13 @@
 
     <context:component-scan base-package="example.angularspring.service.impl"/>
 
-    <sec:http pattern="/admin/**" create-session="ifRequired">
+    <sec:http pattern="/admin/**" create-session="never">
         <sec:http-basic entry-point-ref="restAuthenticationEntryPoint"/>
-        <sec:intercept-url pattern="/admin/**" access="ROLE_USER"/>
-        <sec:logout/>
+        <sec:intercept-url pattern="/**" access="ROLE_USER"/>
+    </sec:http>
+    <sec:http pattern="/action/user" create-session="never">
+        <sec:http-basic entry-point-ref="restAuthenticationEntryPoint"/>
+        <sec:intercept-url pattern="/**" access="ROLE_USER"/>
     </sec:http>
     <sec:http pattern="/**" security="none"/>
 

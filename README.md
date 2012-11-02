@@ -8,4 +8,4 @@ Folgende Features werden gezeigt:
 - Einfache CRUD Funktionalität
 - Generische Behandlung von (Fehler-)Meldungen
 - Clientseitige I18N
-- TODO: Security
+- Security

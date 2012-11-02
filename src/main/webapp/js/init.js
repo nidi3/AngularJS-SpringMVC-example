@@ -63,7 +63,7 @@ as.config(function ($routeProvider, $httpProvider) {
 });
 
 
-as.run(function ($rootScope, $http,base64) {
+as.run(function ($rootScope, $http, base64) {
 
     /**
      * Holds all the requests which failed due to 401 response.
@@ -97,8 +97,16 @@ as.run(function ($rootScope, $http,base64) {
      */
     $rootScope.$on('event:loginRequest', function (event, username, password) {
         as.headers.common['Authorization'] = 'Basic ' + base64.encode(username + ':' + password);
-        $http.get('/action/userInfo').success(function (data) {
+        $http.get('action/user').success(function (data) {
+            $rootScope.user = data;
             $rootScope.$broadcast('event:loginConfirmed');
         });
+    });
+
+    /**
+     * On 'logoutRequest' invoke logout on the server and broadcast 'event:loginRequired'.
+     */
+    $rootScope.$on('event:logoutRequest', function () {
+        as.headers.common['Authorization'] = null;
     });
 });
