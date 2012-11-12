@@ -23,7 +23,7 @@
     </sec:http>
     <sec:http pattern="/**" security="none"/>
 
-    <bean id="restAuthenticationEntryPoint" class="example.angularspring.service.RestAuthenticationEntryPoint"/>
+    <bean id="restAuthenticationEntryPoint" class="example.angularspring.web.RestAuthenticationEntryPoint"/>
 
     <sec:authentication-manager alias="authenticationManager">
         <sec:authentication-provider>
