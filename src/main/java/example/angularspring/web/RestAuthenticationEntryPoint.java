@@ -9,7 +9,7 @@ import org.springframework.security.core.AuthenticationException;
 import org.springframework.security.web.AuthenticationEntryPoint;
 
 /**
- * Just return 403-forbidden for every unathorized request.
+ * Just return 401-unauthorized for every unauthorized request.
  * The client side catches this and handles login itself.
  */
 public class RestAuthenticationEntryPoint implements AuthenticationEntryPoint {

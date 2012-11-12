@@ -9,3 +9,4 @@ Folgende Features werden gezeigt:
 - Generische Behandlung von (Fehler-)Meldungen
 - Clientseitige I18N
 - Security
+- Javascript ohne globale Variablen
